@@ -1,0 +1,7 @@
+start: qstart
+accepting: {q1, q2}
+qstart (_, _ -> $, q0)
+q0 (a, $ -> AZ, q1) (a, A -> AA, q1) (a, B -> _, q0) (b, $ -> B$, q1) (b, B -> BB, q1) (b, A -> _, q0)
+q1 (a, $ -> A$, q1) (a, A -> AA, q1) (a, B -> _, q1) (b, $ -> B$, q2) (b, B -> BB, q2) (b, A -> _, q3)
+q2 (a, $ -> A$, q1) (a, A -> AA, q1) (a, B -> _, q3) (b, $ -> B$, q2) (b, B -> BB, q2) (b, A -> _, q2)
+q3 (_, $ -> $, q0) (_, A -> A, q1) (_, B -> B, q2)

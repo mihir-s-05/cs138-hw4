@@ -1,0 +1,6 @@
+start: qstart
+accepting: {q3}
+qstart (_, _ -> $, q0)
+q0 (a, _ -> A, q0) (b, A -> _, q1) (b, $ -> _, q3) (_, A -> A, q3)
+q1 (b, A -> _, q1) (b, $ -> _, q3) (_, A -> A, q3) (_, $ -> _, q4)
+
