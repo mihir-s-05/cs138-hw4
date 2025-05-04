@@ -1,3 +1,4 @@
+alphabet: {a,b}
 start: qstart
 accepting: {q3}
 qstart (_, _ -> $, q0)
