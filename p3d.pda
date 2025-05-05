@@ -3,4 +3,4 @@ start: qstart
 accepting: {q2}
 qstart (_, _ -> $, q0)
 q0 (a, $ -> A$, q0) (a, A -> AA, q0) (a, B -> AB, q0) (a, $ -> B$, q0) (a, A -> BA, q0) (a, B -> BB, q0) (b, A -> _, q1) (b, B -> A, q1) (_, $ -> $, q2)
-q1 (b, A -> _,  q1) (b, B -> A, q1) (_, $ -> $, q2)
+q1 (b, A -> _,  q1) (b, B -> A, q1) (a, $ -> A$, q0) (a, A -> AA, q0) (a, B -> AB, q0) (a, $ -> B$, q0) (a, A -> BA, q0) (a, B -> BB, q0) (_, $ -> $, q2) 
