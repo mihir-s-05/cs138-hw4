@@ -1,6 +1,5 @@
-alphabet: {a,b}
 start: qstart
-accepting: {q1}
+accepting: {q2}
 qstart (_, _ -> $, q0)
-q0 (a, $ -> A$, q0) (a, A -> AA, q0) (a, B -> AB, q0) (a, X -> B, q0) (b, A -> B, q0) (b, B -> _, q0) (b, $ -> X$, q0) (b, X -> XX, q0) (_, $ -> $, q1) (_, B -> _, q0) (_, X -> _, q0)
-
+q0 (a, $ -> A$, q0) (a, A -> AA, q0) (a, B -> AB, q0) (a, $ -> B$, q0) (a, A -> BA, q0) (a, B -> BB, q0) (b, A -> _, q1) (b, B -> A, q1) (_, $ -> $, q2)
+q1 (b, A -> _,  q1) (b, B -> A, q1) (_, $ -> $, q2)
