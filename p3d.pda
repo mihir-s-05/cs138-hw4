@@ -1,5 +1,5 @@
 alphabet: {a,b}
 start: qstart
 accepting: {q1}
-qstart (_, _ -> S$, q0)
-q0 (a, a -> _, q0) (b, b -> _, q0) (_, S -> aSb, q0) (_, S -> aSbb, q0) (_, S -> bSa, q0) (_, S -> bbSa, q0) (_, S -> SS, q0) (_, S -> _, q0) (_, $ -> _, q1)
+qstart (_, _ -> X$, q0)
+q0 (a, a -> _, q0) (b, b -> _, q0) (_, X -> aSb, q0) (_, X -> aSbb, q0) (_, X -> bSa, q0) (_, X -> bbSa, q0) (_, X -> XX, q0) (_, X -> ab, q0) (_, X -> ba, q0) (_, X -> abb, q0) (_, X -> bab, q0) (_, X -> bba, q0) (_, S -> aSb, q0) (_, S -> aSbb, q0) (_, S -> bSa, q0) (_, S -> bbSa, q0) (_, S -> SS, q0) (_, S -> ab, q0) (_, S -> ba, q0) (_, S -> abb, q0) (_, S -> bab, q0) (_, S -> bba, q0) (_, S -> _, q0) (_, $ -> _, q1) 
