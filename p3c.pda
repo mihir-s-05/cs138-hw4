@@ -1,7 +1,8 @@
 alphabet: {a,b}
 start: qstart
-accepting: {q3}
+accepting: {q2}
 qstart (_, _ -> $, q0)
-q0 (a, _ -> A, q0) (b, A -> _, q1) (b, $ -> _, q3) (_, A -> A, q3)
-q1 (b, A -> _, q1) (b, $ -> _, q3) (_, A -> A, q3) (_, $ -> _, q4)
+q0 (a, _ -> A, q0) (b, A -> _, q1) (b, $ -> $, q2) (_, A -> A, q2) (_, $-> $, q3)
+q1 (b, A -> _, q1) (b, $ -> $, q2) (_, A -> A, q2) (_, $ -> _, q3)
+q2 (b, $ -> $, q2) (b, A -> A, q2)
 
